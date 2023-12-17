@@ -13,7 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run the binary
-        run: ./ishowoff_github starttime=1702795555 
+        run: |
+        ls -al
+        chmod +x ishowoff_github
+        ./ishowoff_github starttime=1702795555 
           
       - name: Commit report
         run: |

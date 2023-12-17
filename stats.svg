@@ -1,0 +1,27 @@
+
+   <svg width="450" height="130">
+    <defs>
+  <clipPath id="horizontalClip" x="20" y="20" width="500" height="200" >
+    <rect x="90" y="20" width="300" height="50"></rect>
+    </clipPath>
+</defs>
+
+    <rect width="450" height="130" fill="rgba(22,27,34)" 
+    stroke="#484f58" stroke-width="1" fill-opacity="1"
+    stroke-opacity="1" x="0" y="0" rx="10px" ry="10px">
+    </rect>
+
+    <use xlink:href="svg/vscode.svg#vscode" x="30" y="30" width="60px" height="60px" />
+    <text x="110" y="45" font-size="20" 
+    clip-path="url(#horizontalClip)"
+    font-weight="bold" font-family="Ubuntu" fill="white">
+    Idling
+    </text>
+    <text x="110" y="70" font-size="17px" font-family="Ubuntu" fill="#ccc">
+    Last session: 31 mins
+    </text>
+    <text x="110" y="90" font-size="12px" font-family="Ubuntu" fill="grey">
+    Visual Studio Code
+    </text>
+   </svg> 
+    

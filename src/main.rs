@@ -1,4 +1,4 @@
-use std::{time::{self, SystemTime, Duration}, fs, io::Write};
+use std::{fs, io::Write};
 
 use ishowoff_github::{make_svg, make_theme, parse_args, parse_time};
 

@@ -37,7 +37,7 @@ impl Theme {
             background_rectangle_stroke: "#008fff".to_string(),
             language: "none".to_string(),
             primary_font: "Ubuntu".to_string(),
-            primary_text_color: "#008ff".to_string(),
+            primary_text_color: "#008fff".to_string(),
             primary_text: "Idling".to_string(),
             session_font: "Ubuntu".to_string(),
             session_text_color: "#007fee".to_string(),
@@ -141,7 +141,7 @@ fn find_language_svg(language: &str) -> String{
     match fs::read_to_string(file_path) {
         Ok(x) => x,
         Err(e) => {
-            eprintln!("Fetching language svg failed");
+            eprintln!("Fetching language svg failed: {}", e);
             std::process::exit(1);
         },
     }

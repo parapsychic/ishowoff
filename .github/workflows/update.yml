@@ -2,11 +2,11 @@
 name: Update SVG
 
 on: 
-  workflow_dispatch:
+  repository_dispatch:
   
 permissions:
   contents: write
-  
+    
 jobs:
   report:
     runs-on: ubuntu-latest
@@ -14,13 +14,12 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run the binary
         run: |
-        ls -al
         chmod +x ishowoff_github
-        ./ishowoff_github starttime=1702795555 
+        ./ishowoff_github ${{ github.event.client_payload.arguments }}
           
       - name: Commit report
         run: |
           git config --global user.name 'IShowOff'
           git config --global user.email 'ishowoff@showingoff.com'
-          git commit -am "Automated report"
+          git commit -am "Updating session"
           git push

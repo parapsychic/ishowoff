@@ -1,5 +1,10 @@
 
-   <svg width="450" height="130">
+   <svg width="450" height="130"
+   viewBox="0 0 450 130"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        role="img">
     <defs>
   <clipPath id="horizontalClip" x="20" y="20" width="500" height="200" >
     <rect x="90" y="20" width="300" height="50"></rect>
@@ -11,14 +16,19 @@
     stroke-opacity="1" x="0" y="0" rx="10px" ry="10px">
     </rect>
 
-    <use xlink:href="svg/vscode.svg#vscode" x="30" y="30" width="60px" height="60px" />
+    <svg width="60px" height="60px" x="30" y="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="js">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="24" height="24" fill="#F1DC50"/>
+    <path stroke="#333" stroke-width="2" d="M12,11 C12,15.749205 12,18.4158717 12,19 C12,19.8761925 11.4771235,21 10,21 C7.61461794,21 7.5,19 7.5,19 M20.7899648,13.51604 C20.1898831,12.5053467 19.3944074,12 18.4035378,12 C16.8563489,12 16,13 16,14 C16,15 16.5,16 18.5084196,16.5 C19.7864643,16.8181718 21,17.5 21,19 C21,20.5 19.6845401,21 18.5,21 C16.9861609,21 15.9861609,20.3333333 15.5,19"/>
+  </g>
+</svg>
     <text x="110" y="45" font-size="20" 
     clip-path="url(#horizontalClip)"
     font-weight="bold" font-family="Ubuntu" fill="white">
     Idling
     </text>
     <text x="110" y="70" font-size="17px" font-family="Ubuntu" fill="#ccc">
-    Last session: 31 mins
+    Last session: 1 hours
     </text>
     <text x="110" y="90" font-size="12px" font-family="Ubuntu" fill="grey">
     Visual Studio Code

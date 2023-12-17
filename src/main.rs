@@ -15,7 +15,7 @@ fn main() {
         Err(x) => {
             eprintln!("{}", x);
             usage();
-            std::process::exit(0);
+            std::process::exit(1);
         }
     };
 
@@ -30,13 +30,13 @@ fn main() {
             Ok(x) => x,
             Err(_) => {
                 eprintln!("Start time should be in unix epochs");
-                std::process::exit(0);
+                std::process::exit(1);
             }
         }
     } else {
         eprintln!("Start time not specified");
         usage();
-        std::process::exit(0);
+        std::process::exit(1);
     };
         parse_time(start_time)
         

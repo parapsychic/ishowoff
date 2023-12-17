@@ -1,9 +1,9 @@
-use std::{collections::HashMap, time::{SystemTime, self, Duration}};
+use std::{collections::HashMap, time::{SystemTime, self, Duration}, fs};
 
 pub struct Theme {
     background_rectangle_primary: String,
     background_rectangle_stroke: String,
-    language_svg: String,
+    language: String,
     primary_font: String,
     primary_text_color: String,
     primary_text: String,
@@ -19,7 +19,7 @@ impl Theme {
         Theme {
             background_rectangle_primary: "rgba(22,27,34)".to_string(),
             background_rectangle_stroke: "#484f58".to_string(),
-            language_svg: "svg/vscode.svg#vscode".to_string(),
+            language: "none".to_string(),
             primary_font: "Ubuntu".to_string(),
             primary_text_color: "white".to_string(),
             primary_text: "Idling".to_string(),
@@ -35,7 +35,7 @@ impl Theme {
         Theme {
             background_rectangle_primary: "white".to_string(),
             background_rectangle_stroke: "#008fff".to_string(),
-            language_svg: "svg/vscode.svg#vscode".to_string(),
+            language: "none".to_string(),
             primary_font: "Ubuntu".to_string(),
             primary_text_color: "#008ff".to_string(),
             primary_text: "Idling".to_string(),
@@ -87,7 +87,7 @@ pub fn make_theme(args: HashMap<String, String>) -> Theme {
             match key {
                 "bg-primary" => theme.background_rectangle_primary = x.clone(),
                 "bg-stroke" => theme.background_rectangle_stroke = x.clone(),
-                "lang" => theme.language_svg = x.clone(),
+                "lang" => theme.language = x.clone(),
                 "primary-color" => theme.primary_text_color = x.clone(),
                 "primary-font" => theme.primary_font = x.clone(),
                 "primary-text" => theme.primary_text = x.clone(),
@@ -129,10 +129,35 @@ pub fn parse_time(start_time: u64) -> String {
     }
 }
 
+fn find_language_svg(language: &str) -> String{
+    let language_svgs = HashMap::from([
+        ("js", "svg/js.svg"),
+        ("javascript", "svg/js.svg"),
+        ("none", "svg/vscode.svg")
+    ]);
+
+    let file_path = language_svgs.get(language).unwrap_or(&"svg/vscode.svg");
+
+    match fs::read_to_string(file_path) {
+        Ok(x) => x,
+        Err(e) => {
+            eprintln!("Fetching language svg failed");
+            std::process::exit(1);
+        },
+    }
+
+}
+
 pub fn make_svg(theme: Theme, session_time: &str) -> String {
+    let language_svg = find_language_svg(&theme.language);
     let svg = format!(
         "
-   <svg width=\"450\" height=\"130\">
+   <svg width=\"450\" height=\"130\"
+   viewBox=\"0 0 450 130\"
+        fill=\"none\"
+        xmlns=\"http://www.w3.org/2000/svg\"
+        xmlns:xlink=\"http://www.w3.org/1999/xlink\"
+        role=\"img\">
     <defs>
   <clipPath id=\"horizontalClip\" x=\"20\" y=\"20\" width=\"500\" height=\"200\" >
     <rect x=\"90\" y=\"20\" width=\"300\" height=\"50\"></rect>
@@ -144,7 +169,7 @@ pub fn make_svg(theme: Theme, session_time: &str) -> String {
     stroke-opacity=\"1\" x=\"0\" y=\"0\" rx=\"10px\" ry=\"10px\">
     </rect>
 
-    <use xlink:href=\"{}\" x=\"30\" y=\"30\" width=\"60px\" height=\"60px\" />
+    {}
     <text x=\"110\" y=\"45\" font-size=\"20\" 
     clip-path=\"url(#horizontalClip)\"
     font-weight=\"bold\" font-family=\"{}\" fill=\"{}\">
@@ -160,7 +185,7 @@ pub fn make_svg(theme: Theme, session_time: &str) -> String {
     ",
         theme.background_rectangle_primary,
         theme.background_rectangle_stroke,
-        theme.language_svg,
+        language_svg,
         theme.primary_font,
         theme.primary_text_color,
         theme.primary_text,

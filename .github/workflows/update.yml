@@ -1,0 +1,23 @@
+# .github/workflows/build.yml
+name: Update SVG
+
+on: 
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+  
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run the binary
+        run: ./ishowoff_github starttime=1702795555 
+          
+      - name: Commit report
+        run: |
+          git config --global user.name 'IShowOff'
+          git config --global user.email 'ishowoff@showingoff.com'
+          git commit -am "Automated report"
+          git push

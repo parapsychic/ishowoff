@@ -16,7 +16,8 @@ Shows your last programming session details on your Github Profile:
 It displays your recent programming session details with a nice little card on your profile.
 
 It's like ishowspeed, but instead of showing off 🥩, it shows off your programming session details.
-<img src="images/ishowspeed.jpg" width="100px">
+
+<img src="images/ishowspeed.jpg" width="400px">
 
 ## Setup
 This is a two-part setup. 
@@ -78,3 +79,8 @@ Built with ❤️ and Rust
 
 <a href="https://youtu.be/Eweu-mHzmq4?si=pAnmXEZV0725b7rS" target="_blank" rel="noopener"><img src=".readme_images/hong.png" height=100px></a>
 
+
+
+🫰 Inspired by my friend who never powers off his laptop and idles on Visual Studio for 42 hours.
+
+✨ Actual implementation inspired by [jamesgeorge007/github-activity-readme](https://github.com/jamesgeorge007/github-activity-readme).

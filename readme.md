@@ -65,6 +65,9 @@ Workarounds:
 - Have the github action commit to your readme repo. But if you use some other similar readme editing actions, it might cause issues.
 - Or you could always host it on your own server or something and everytime the action generates the svg file, send it to your server.
 
+## Todo:
+Use the build workflow's artifact to run instead of committing binary. Run a cron job every 90 days to prevent artifact deletion.
+
 ## Problems?
 It Just Works<sup>TM</sup>  
 

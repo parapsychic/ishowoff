@@ -31,7 +31,8 @@ You need a extension running on your editor for this to work. At the moment, I h
 <img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
 </a>
 ```
-3. Install the appropriate extension: [VS Code Extension](https://github.com/parapsychic/ishowoff_vscode/). Follow the setup there. I will update the readme after the extension is published.
+3. Install the appropriate extension: [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=parapsychic.ishowoff).
+4. Follow the setup as mentioned in the extension readme. For VS Code, [click here](https://github.com/parapsychic/ishowoff_vscode).
 
 ### Arguments
 You can customize the svg by supplying the following arguments either directly from the extension (recommended) or by modifying the github action (not recommended).

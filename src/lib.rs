@@ -129,10 +129,23 @@ pub fn parse_time(start_time: u64) -> String {
     }
 }
 
+// could be in it's own module
 fn find_language_svg(language: &str) -> String{
     let language_svgs = HashMap::from([
         ("js", "svg/js.svg"),
         ("javascript", "svg/js.svg"),
+        ("ts", "svg/ts.svg"),
+        ("typescript", "svg/ts.svg"),
+        ("javascriptreact", "svg/react.svg"),
+        ("typescriptreact", "svg/react.svg"),
+        ("react", "svg/react.svg"),
+        ("rust", "svg/rust.svg"),
+        ("go", "svg/go.svg"),
+        ("c", "svg/c.svg"),
+        ("cpp", "svg/cpp.svg"),
+        ("c++", "svg/cpp.svg"),
+        ("csharp", "svg/csharp.svg"),
+        ("c#", "svg/csharp.svg"),
         ("none", "svg/vscode.svg")
     ]);
 
@@ -149,7 +162,7 @@ fn find_language_svg(language: &str) -> String{
 }
 
 pub fn make_svg(theme: Theme, session_time: &str) -> String {
-    let language_svg = find_language_svg(&theme.language);
+    let language_svg = find_language_svg(&theme.language.to_lowercase());
     let svg = format!(
         "
    <svg width=\"450\" height=\"130\"
@@ -158,6 +171,11 @@ pub fn make_svg(theme: Theme, session_time: &str) -> String {
         xmlns=\"http://www.w3.org/2000/svg\"
         xmlns:xlink=\"http://www.w3.org/1999/xlink\"
         role=\"img\">
+    <style>
+    *{{
+        font-family: 'Segoe UI', Ubuntu, monospace
+    }}
+    </style>
     <defs>
   <clipPath id=\"horizontalClip\" x=\"20\" y=\"20\" width=\"500\" height=\"200\" >
     <rect x=\"90\" y=\"20\" width=\"300\" height=\"50\"></rect>

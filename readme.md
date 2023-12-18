@@ -16,7 +16,8 @@ Shows your last programming session details on your Github Profile:
 It displays your recent programming session details with a nice little card on your profile.
 
 It's like ishowspeed, but instead of showing off 🥩, it shows off your programming session details.
-<img src="images/ishowspeed.jpg" width="100px">
+
+<img src="images/ishowspeed.jpg" width="400px">
 
 ## Setup
 This is a two-part setup. 
@@ -30,7 +31,8 @@ You need a extension running on your editor for this to work. At the moment, I h
 <img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
 </a>
 ```
-3. Install the appropriate extension: [VS Code Extension](https://github.com/parapsychic/ishowoff_vscode/). Follow the setup there. I will update the readme after the extension is published.
+3. Install the appropriate extension: [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=parapsychic.ishowoff).
+4. Follow the setup as mentioned in the extension readme. For VS Code, [click here](https://github.com/parapsychic/ishowoff_vscode).
 
 ### Arguments
 You can customize the svg by supplying the following arguments either directly from the extension (recommended) or by modifying the github action (not recommended).
@@ -81,3 +83,8 @@ Built with ❤️ and Rust
 
 <a href="https://youtu.be/Eweu-mHzmq4?si=pAnmXEZV0725b7rS" target="_blank" rel="noopener"><img src=".readme_images/hong.png" height=100px></a>
 
+
+
+🫰 Inspired by my friend who never powers off his laptop and idles on Visual Studio for 42 hours.
+
+✨ Actual implementation inspired by [jamesgeorge007/github-activity-readme](https://github.com/jamesgeorge007/github-activity-readme).

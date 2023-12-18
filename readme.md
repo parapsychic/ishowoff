@@ -1,16 +1,40 @@
 # IShowOff
+Ever felt the urge to show your programming session time to the world to flex on them normies?
+
+You could either use a Discord RPC extension like a normal human being, or announce to the world like a total lunatic.
+
+If you are a total lunatic, then I've got good news for you my friend.
+
+Introducing ishowoff.
+
 It's like Discord RPC but for Github.
 
 Shows your last programming session details on your Github Profile:
+<img src="images/img.png" width="100%"/>
 
 ## What does it do?
-It displays your recent activity on Github and makes your profile look better than what it looks like right now.
+It displays your recent programming session details with a nice little card on your profile.
 
-It will also show what you are doing right now on your computer, like editing a specific project or just idling on VSCode for 42 hours (you know who you are). 
+It's like ishowspeed, but instead of showing off 🥩, it shows off your programming session details.
+<img src="images/ishowspeed.jpg" width="100px">
 
-I'm developing a vscode plugin to go along with this. I'll update this readme with detailed instructions once I finish with that.
+## Setup
+This is a two-part setup. 
+
+You need a extension running on your editor for this to work. At the moment, I have only made the VS Code extension, which is funny, because I developed this on neovim. I should probably start studying Lua.
+
+1. Fork this repo.
+2. Add the following to your github readme:
+```html
+<a href="https://github.com/parapsychic/ishowoff">
+<img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
+</a>
+```
+3. Install the appropriate extension: [VS Code Extension](https://github.com/parapsychic/ishowoff_vscode/). Follow the setup there. I will update the readme after the extension is published.
 
 ### Arguments
+You can customize the svg by supplying the following arguments either directly from the extension (recommended) or by modifying the github action (not recommended).
+
 ```
 USAGE:
         For defaults, supply only the timestamp: ishowoff starttime=10:00
@@ -29,12 +53,24 @@ USAGE:
         	Editor text:              editor-text
 ```
 
+### Themes
+Right now, only default dark/light themes are supported. But you can painstakingly set the arguments to create any theme you want.
+
+By default, while setting your own arguments, dark theme will be used as the base theme in case you do miss any of the arguments. To override this, use theme=light.
+
+### Some known issues:
+The svg on your profile might not be immediately updated. This has something to do with the way Github works. 
+
+Workarounds:
+- Have the github action commit to your readme repo. But if you use some other similar readme editing actions, it might cause issues.
+- Or you could always host it on your own server or something and everytime the action generates the svg file, send it to your server.
+
 ## Problems?
 It Just Works<sup>TM</sup>  
 
 <img src="https://yt3.ggpht.com/a/AATXAJxuZBNfke48M_7TcSsN9iMtJmaE1JTNVVfEeg=s900-c-k-c0xffffffff-no-rj-mo" target="_blank" rel="noopener"  height=100px >
 
-But in case it doesn't, [click here](https://newfastuff.com/wp-content/uploads/2019/05/5p3oYv1.png)
+But in case it doesn't, [click here](https://newfastuff.com/wp-content/uploads/2019/05/5p3oYv1.png) or open an issue and cross your fingers.
 
 Built with ❤️ and Rust
 

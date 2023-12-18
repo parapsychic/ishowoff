@@ -27,9 +27,7 @@ You need a extension running on your editor for this to work. At the moment, I h
 1. Fork this repo.
 2. Add the following to your github readme:
 ```html
-<a href="https://github.com/parapsychic/ishowoff">
 <img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
-</a>
 ```
 3. Install the appropriate extension: [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=parapsychic.ishowoff).
 4. Follow the setup as mentioned in the extension readme. For VS Code, [click here](https://github.com/parapsychic/ishowoff_vscode).

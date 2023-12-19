@@ -25,7 +25,8 @@ This is a two-part setup.
 You need a extension running on your editor for this to work. At the moment, I have only made the VS Code extension, which is funny, because I developed this on neovim. I should probably start studying Lua.
 
 1. Fork this repo.
-2. Add the following to your github readme:
+2. Go to Actions tab and enable workflows.
+3. Add the following to your github readme:
 ```html
 <img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
 ```

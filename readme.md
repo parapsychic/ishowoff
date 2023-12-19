@@ -26,12 +26,12 @@ You need a extension running on your editor for this to work. At the moment, I h
 
 1. Fork this repo.
 2. Go to Actions tab and enable workflows.
-3. Add the following to your github readme:
+3. Add the following to your GitHub profile readme:
 ```html
 <img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
 ```
-3. Install the appropriate extension: [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=parapsychic.ishowoff).
-4. Follow the setup as mentioned in the extension readme. For VS Code, [click here](https://github.com/parapsychic/ishowoff_vscode).
+4. Install the appropriate extension: [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=parapsychic.ishowoff).
+5. Follow the setup as mentioned in the extension readme. For VS Code, [click here](https://github.com/parapsychic/ishowoff_vscode).
 
 ### Arguments
 You can customize the svg by supplying the following arguments either directly from the extension (recommended) or by modifying the github action (not recommended).

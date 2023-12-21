@@ -28,7 +28,9 @@ You need a extension running on your editor for this to work. At the moment, I h
 2. Go to Actions tab and enable workflows.
 3. Add the following to your GitHub profile readme:
 ```html
-<img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/parapsychic/ishowoff/">
+  <img src="https://raw.githubusercontent.com/{YOUR USERNAME}/{YOUR FORKED REPO: default: ishowoff}/main/stats.svg">
+</a>
 ```
 4. Install the appropriate extension: [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=parapsychic.ishowoff).
 5. Follow the setup as mentioned in the extension readme. For VS Code, [click here](https://github.com/parapsychic/ishowoff_vscode).

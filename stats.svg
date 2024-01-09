@@ -68,7 +68,7 @@
     find-a-coach
     </text>
     <text x="110" y="70" font-size="17px" font-family="Ubuntu" fill="#ccc">
-    Last session: 2 hours
+    Last session: 3 hours
     </text>
     <text x="110" y="90" font-size="12px" font-family="Ubuntu" fill="grey">
     Visual Studio Code

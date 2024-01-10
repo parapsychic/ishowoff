@@ -65,10 +65,10 @@
     <text x="110" y="45" font-size="20" 
     clip-path="url(#horizontalClip)"
     font-weight="bold" font-family="Ubuntu" fill="white">
-    movie-library
+    find-a-coach
     </text>
     <text x="110" y="70" font-size="17px" font-family="Ubuntu" fill="#ccc">
-    Last session: 4 hours
+    Last session: 5 hours
     </text>
     <text x="110" y="90" font-size="12px" font-family="Ubuntu" fill="grey">
     Visual Studio Code

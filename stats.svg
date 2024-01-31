@@ -65,7 +65,7 @@
     <text x="110" y="45" font-size="20" 
     clip-path="url(#horizontalClip)"
     font-weight="bold" font-family="Ubuntu" fill="white">
-    university-courses
+    movie-library
     </text>
     <text x="110" y="70" font-size="17px" font-family="Ubuntu" fill="#ccc">
     Last session: 3 hours

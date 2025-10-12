@@ -118,8 +118,8 @@ pub fn parse_time(start_time: u64) -> String {
 
     // if more than an hour, return as hours. else return as minutes
 
-    if duration.as_secs() < 600{
-        return "Less than 10 minutes".to_string();
+    if duration.as_secs() < 60{
+        return "Less than 1 min".to_string();
     }
     else if duration.as_secs() < 3600{
         return (duration.as_secs() / 60).to_string() + " mins";
